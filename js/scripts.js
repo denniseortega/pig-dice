@@ -32,7 +32,6 @@ Player.prototype.changeScore = function() {
 
 var playerOne = new Player();
 var playerTwo = new Player();
-console.log(playerOne);
 
 // Front End Logic
 $(document).ready(function() {
@@ -41,25 +40,39 @@ $(document).ready(function() {
   $(".show-scores-1").hide();
   $(".show-scores-2").hide();
 
+  $(".play").click(function(event){
+    event.preventDefault();
+    $("#player-one").show();
+    $(".show-scores-1").show();
+    $(".show-scores-2").show();
+    $(".play").hide();
+  });
+
   $("#p1-roll").click(function(event){
     event.preventDefault();
     playerOne.playerDice.roll();
     playerOne.changeScore();
     $(".shows-dice-1").text(playerOne.playerDice.num);
-    $(".show-scores-1").text(playerOne.score)
+    $("#show-scores-one").text(playerOne.score)
   });
   $("#p1-hold").click(function(event){
-  event.preventDefault();
+    event.preventDefault();
+    $("#player-one").hide();
+    $(".shows-dice-1").hide();
+    $("#player-two").show();
   });
   $("#p2-roll").click(function(event){
   event.preventDefault();
-  playerTwo.playerDice.roll();
-  playerTwo.changeScore();
-  $(".shows-dice-2").text(playerTwo.playerDice.num);
-  $(".show-scores-2").text(playerTwo.score)
+    playerTwo.playerDice.roll();
+    playerTwo.changeScore();
+    $(".shows-dice-2").text(playerTwo.playerDice.num);
+    $("#show-scores-two").text(playerTwo.score)
   });
   $("#p2-hold").click(function(event){
   event.preventDefault();
+  $("#player-two").hide();
+  $(".shows-dice-2").hide();
+  $("#player-one").show();
   });
 
 

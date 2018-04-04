@@ -1,3 +1,19 @@
+#player-one {
+  display: none;
+}
+
+#player-two {
+  display: none;
+}
+
+.show-scores-1 {
+  display: none;
+}
+
+.show-scores-1 {
+  display: none;
+}
+
 .container {
   text-align: center;
 }
