@@ -9,18 +9,20 @@
   </head>
   <body>
     <h1>Pig Dice</h2>
-      <form id="player">
-        <div class="form-group">
-          <label for="Player">Player</label>
-          <input type="text" class="form-control" id="player-amount">
+      <div class="play">
+        <button type="button">Play</button>
+      </div>
+
+        <div id="player-one">
+          <h3>Player One</h3>
+          <button type="button" id="p1-roll">Roll Dice</button>
+          <button type="button" id="p1-hold">Hold</button>
         </div>
 
-        <button type="submit">Submit</button>
-      </form>
-
-        <div id="rollDice">
-          <button type="button">Roll Dice</button>
-          <button type="button">Hold</button>
+        <div id="player-two">
+          <h3>Player Two</h3>
+          <button type="button" id="p2-roll">Roll Dice</button>
+          <button type="button" id="p2-hold">Hold</button>
         </div>
 
         <div class="shows-dice">
