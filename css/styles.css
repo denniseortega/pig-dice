@@ -17,3 +17,14 @@
 .container {
   text-align: center;
 }
+
+.container h1 {
+  margin: 5%;
+  font-size: 50pt;
+  letter-spacing: 2pt;
+}
+
+body {
+  background-color: #FDCA40;
+  font-family: helvetica;
+}

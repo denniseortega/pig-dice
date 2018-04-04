@@ -16,14 +16,17 @@ Dice.prototype.roll = function() {
 function Player(){
   playerDice = new Dice();
   score = 0;
+  totalScore = 0;
   this.score = score;
   this.playerDice = playerDice;
+  this.totalScore = score;
 }
 
 // Prototype Method to change player score
 Player.prototype.changeScore = function() {
  if (this.playerDice.roll() > 1) {
       this.score += this.playerDice.num;
+      this.totalScore += this.score;
   } else {
     this.score = 0;
   }
@@ -53,12 +56,20 @@ $(document).ready(function() {
     playerOne.playerDice.roll();
     playerOne.changeScore();
     $(".shows-dice-1").text(playerOne.playerDice.num);
-    $("#show-scores-one").text(playerOne.score)
+    $("#show-scores-one").text(playerOne.totalScore)
+
+    if (playerOne.playerDice.num == 1) {
+      $("#player-one").hide();
+      $(".shows-dice-1").fadeOut(2000);
+      $(".shows-dice-2").fadeIn(2000);
+      $("#player-two").show();
+    }
   });
   $("#p1-hold").click(function(event){
     event.preventDefault();
     $("#player-one").hide();
     $(".shows-dice-1").hide();
+    $(".shows-dice-2").fadeIn(2000);
     $("#player-two").show();
   });
   $("#p2-roll").click(function(event){
@@ -66,12 +77,20 @@ $(document).ready(function() {
     playerTwo.playerDice.roll();
     playerTwo.changeScore();
     $(".shows-dice-2").text(playerTwo.playerDice.num);
-    $("#show-scores-two").text(playerTwo.score)
+    $("#show-scores-two").text(playerTwo.totalScore)
+
+    if (playerTwo.playerDice.num == 1) {
+      $("#player-two").hide();
+      $(".shows-dice-2").fadeOut(2000);
+      $(".shows-dice-1").fadeIn(2000);
+      $("#player-one").show();
+    }
   });
   $("#p2-hold").click(function(event){
   event.preventDefault();
   $("#player-two").hide();
   $(".shows-dice-2").hide();
+  $(".shows-dice-1").fadeIn(2000);
   $("#player-one").show();
   });
 
