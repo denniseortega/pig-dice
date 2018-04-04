@@ -76,8 +76,8 @@ $(document).ready(function() {
     if (playerOne.playerDice.num == 1) {
       $("#show-scores-one").text("Round Total: " + playerOne.roundTotal + " Total Score: " + playerOne.totalScore)
       $("#player-one").hide();
-      $(".shows-dice-1").fadeOut(2000);
-      $(".shows-dice-2").fadeIn(2000);
+      $(".shows-dice-1").fadeOut(1000);
+      $(".shows-dice-2").fadeIn(1000);
       $("#player-two").show();
     }
     checkWin();
@@ -88,7 +88,7 @@ $(document).ready(function() {
     $("#show-scores-one").text("Total Score: " + playerOne.totalScore)
     $("#player-one").hide();
     $(".shows-dice-1").hide();
-    $(".shows-dice-2").fadeIn(2000);
+    $(".shows-dice-2").fadeIn(1000);
     $("#player-two").show();
   });
   $("#p2-roll").click(function(event){
@@ -101,8 +101,8 @@ $(document).ready(function() {
     if (playerTwo.playerDice.num == 1) {
       $("#show-scores-two").text("Round Total: " + playerTwo.roundTotal + " Total Score: " + playerTwo.totalScore)
       $("#player-two").hide();
-      $(".shows-dice-2").fadeOut(2000);
-      $(".shows-dice-1").fadeIn(2000);
+      $(".shows-dice-2").fadeOut(1000);
+      $(".shows-dice-1").fadeIn(1000);
       $("#player-one").show();
     }
     checkWin();
@@ -113,7 +113,7 @@ $(document).ready(function() {
   $("#show-scores-two").text("Total Score: " + playerTwo.totalScore)
   $("#player-two").hide();
   $(".shows-dice-2").hide();
-  $(".shows-dice-1").fadeIn(2000);
+  $(".shows-dice-1").fadeIn(1000);
   $("#player-one").show();
   });
 
