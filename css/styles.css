@@ -33,16 +33,30 @@ body {
 }
 
 .shows-dice-1 {
-  font-size: 100pt;
+  font-size: 80pt;
   color: #9E2A2B;
 }
 
 .shows-dice-2 {
-  font-size: 100pt;
+  font-size: 80pt;
   color: #9E2A2B;
 }
 
 h4 {
   font-size: 27pt;
   font-weight: bold;
+}
+
+.container h3 {
+  font-size: 40pt;
+}
+
+#show-scores-one {
+  font-size: 18pt;
+  color: #BA1D1D;
+}
+
+#show-scores-two {
+  font-size: 18pt;
+  color:#BA1D1D;
 }
